@@ -1,0 +1,11 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - docker build -t jamesnetherton/puppet-google-chrome .
+
+test:
+  override:
+    - docker run jamesnetherton/puppet-google-chrome
