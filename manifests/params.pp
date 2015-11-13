@@ -8,7 +8,7 @@ class google_chrome::params() {
   case $::osfamily {
     'RedHat', 'Suse': {
       case $::operatingsystem {
-        'Fedora', 'OpenSuSE': {
+        'CentOS', 'Fedora', 'OpenSuSE': {
           $repo_base_url = 'http://dl.google.com/linux/chrome/rpm/stable/$basearch'
         }
         default: {
